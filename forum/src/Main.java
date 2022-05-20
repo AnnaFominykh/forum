@@ -101,10 +101,22 @@ System.out.println("  ");
             System.out.println(M3.registered.get(i).GetName());
         }
 
+        System.out.println("  ");
 
-        M1.write_comm("Может лучше в бассейн?");
-        M2.write_comm("Лучше в кафе!");
-        M3.write_comm("Нет уж, сначало в кино, а потом хоть на хоккей");
+        M1.write_comm(": Может лучше в бассейн?");
+        M2.write_comm(": Лучше в кафе!");
+        M3.write_comm(": Нет уж, сначало в кино, а потом хоть на хоккей");
+
+        System.out.println(M1.message.get(1).get_u_id()+" : " + R1.registered.get(1).GetName()+
+                M1.message.get(2).getText()+" | " +M1.message.get(2).Get_m_id() );
+
+        System.out.println(M2.message.get(1).get_u_id()+" : " + R1.registered.get(7).GetName()+
+                M2.message.get(1).getText()+" | " +M3.message.get(1).Get_m_id() );
+
+        System.out.println(M3.message.get(1).get_u_id()+" : " + R1.registered.get(5).GetName()+
+                M3.message.get(1).getText()+" | " +M1.message.get(1).Get_m_id() );
+
+
         System.out.println("  ");
 
         System.out.println( R1.registered.get(1).GetRole());
@@ -115,7 +127,7 @@ System.out.println("  ");
 
         System.out.println( M3.registered.get(1).GetRole());
 
-        M1.red(": Салют!",": Приветики!");
+        M1.red("Салют","Приветики!");
 
         System.out.println("  ");
 

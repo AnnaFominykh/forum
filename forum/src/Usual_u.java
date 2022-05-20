@@ -83,12 +83,15 @@ public class Usual_u {
 
     }
 
-    public void red( String text, String a) {
-        text=a;
+    public void red( String text, String b) {
+
+        String red =text.replace(text,b);
+
+        text = red;
+        
 
         Messages new_mess = new Messages();
         new_mess.setText(text);
-        new_mess.setText(a);
         message.add(new_mess);
 
     }
