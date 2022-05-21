@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
         <artifactId>main</artifactId>
-        <groupId>classes</groupId>
+        <groupId>Classes</groupId>
         <version>1.0-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
@@ -16,14 +16,14 @@
     </properties>
 
 
-<groupId>classes</groupId>
+<groupId>Classes</groupId>
     <artifactId>ua</artifactId>
 <version>1.0-SNAPSHOT</version>
-    <packaging>jar</packaging>
+
 
     <dependencies>
         <dependency>
-            <groupId>classes</groupId>
+            <groupId>Classes</groupId>
             <artifactId>main</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
