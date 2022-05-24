@@ -1,10 +1,18 @@
 public class Elements extends Cartoons_dt {
+    private String Cname;
     private String name;
     private String aname;
     private String location;
 
     public String getName() {
         return name;
+    }
+
+    public void setCName(String Cname) {
+        this.name = name;
+    }
+    public String getCname() {
+        return Cname;
     }
 
     public void setName(String name) {

@@ -78,7 +78,7 @@ public class Cartoons {
         {Cartoons.remove(d);}
     }
 
-    public void Red(String c_id, String new_name, String new_rait)
+    public void Red (String c_id, String new_name, String new_rait)
     {
         for (Cartoons_dt cart:Cartoons) {
             if (cart.getCart_id() == c_id) {

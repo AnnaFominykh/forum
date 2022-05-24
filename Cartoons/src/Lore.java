@@ -7,7 +7,7 @@ public class Lore extends Cartoons{
 
         Elements el = new Elements();
         el.setLore_id(L_id());
-        el.setName(mc_name);
+        el.setCName(mc_name);
         el.setAname(ag_name);
         el.setLocation(loc);
         boolean add = elements.add(el);
@@ -17,17 +17,17 @@ public class Lore extends Cartoons{
         String L_id=L_id();
         int L;
         for (L=0;L<elements.size(); L++);
-        if (elements.get(L).getName().equals(mc_name)&&elements.get(L).getName().equals(ag_name)&&
+        if (elements.get(L).getCname().equals(mc_name)&&elements.get(L).getAname().equals(ag_name)&&
                 elements.get(L).getLore_id().equals(L_id)&& elements.get(L).getLocation().equals(loc));
         {elements.remove(L);}
     }
 
-    public void Red(String l_id,String new_name,String new_aname, String new_loc)
-    {   for (Elements EL:elements) {
-                if (EL.getLore_id() == l_id) {
-                    EL.setName(new_name);
-                    EL.setName(new_aname);
-                    EL.setRaiting(new_loc);
+    public void Red(String L_id,String new_Cname,String new_aname, String new_loc)
+    {   for (Elements EL2:elements) {
+                if (EL2.getLore_id() == L_id) {
+                    EL2.setCName(new_Cname);
+                    EL2.setName(new_aname);
+                    EL2.setRaiting(new_loc);
     }
 
 }}}

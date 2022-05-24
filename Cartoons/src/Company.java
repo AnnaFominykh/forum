@@ -25,10 +25,10 @@ boolean add = elements.add(el);
     }
 
     public void Red(String C_id, String new_name, String new_loc) {
-        for (Elements EL : elements) {
-            if (EL.getCompany_id() == C_id) {
-                EL.setName(new_name);
-               EL.setRaiting(new_loc);
+        for (Elements EL1: elements) {
+            if (EL1.getCompany_id() == C_id) {
+                EL1.setName(new_name);
+               EL1.setRaiting(new_loc);
             }
 
 

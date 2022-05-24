@@ -95,11 +95,19 @@ p.add("Return girl home","Girl appeared in Monster Inc.",
                 Ct.Cartoons.get(0).getRaiting()+" | " +E2.elements.get(0).getLore_id()+" | "
                 +p.plot.get(0).getPlot_id());
 
-E1.Red(E1.elements.get(0).getCompany_id(),"Warner Br.","US");
+E1.Red(E1.elements.get(0).getCompany_id(),"Disney+","US");
         System.out.println(" | "+E1.elements.get(0).getCompany_id()+" | " + E1.elements.get(0).getName()+" | "+
                 E1.elements.get(0).getLocation()+" | ");
 
-E2.Red(E2.elements.get(0),"");
+
+        System.out.println(" | "+p.plot.get(0).getPlot_id()+" | " + p.plot.get(0).getBase()+" | "
+                + p.plot.get(0).getBeggining()+" | " + p.plot.get(0).getThe_Climax()+" | "
+                + p.plot.get(0).getEnding()+" | ");
+
+E2.Red(E2.elements.get(0),"Alladin","Jafar","Agraba");
+        System.out.println(" | "+E2.elements.get(0).getLore_id()+" | " + E2.elements.get(0).getName()+" | "
+                + E2.elements.get(0).getAname()+" | " + E2.elements.get(0).getLocation()+" | ");
+
 
 
 
