@@ -30,9 +30,15 @@ p.add("Summon M.C. father","Part of wand breaks","Fighting whith dragon","Summon
 p.add("Return girl home","Girl appeared in Monster Inc.",
         "Fight whith Randall","Monster Inc. start work at laughter");
 
+        for (int c= 0; c <  Ct.Cartoons.size(); c++){
+            Ct.Cartoons.get(c).getCart_id();
+        }
 
         for (int C= 0; C < Ct.Cartoons.size(); C++){
             Ct.Cartoons.get(C).getCompany_id();
+        }
+        for (int c= 0; c < Ct.Cartoons.size(); c++){
+            Ct.Cartoons.get(c).getCart_id();
         }
         for (int P= 0; P < Ct.Cartoons.size(); P++){
             Ct.Cartoons.get(P).getPlot_id();
@@ -69,24 +75,31 @@ p.add("Return girl home","Girl appeared in Monster Inc.",
 
         System.out.println("  ");
 
-        System.out.println(Ct.Cartoons.get(0).getName()+" | " + E1.elements.get(0).getCompany_id()+" | "+
+
+
+        System.out.println(Ct.Cartoons.get(0).getCart_id()+" | "+Ct.Cartoons.get(0).getName()+" | " + E1.elements.get(0).getCompany_id()+" | "+
                 Ct.Cartoons.get(0).getRaiting()+" | " +E2.elements.get(0).getLore_id()+" | "
                 +p.plot.get(0).getPlot_id());
-        System.out.println(Ct.Cartoons.get(1).getName()+" | " + E1.elements.get(1).getCompany_id()+" | "+
+        System.out.println(Ct.Cartoons.get(1).getCart_id()+" | "+Ct.Cartoons.get(1).getName()+" | " + E1.elements.get(1).getCompany_id()+" | "+
                 Ct.Cartoons.get(1).getRaiting()+" | " +E2.elements.get(1).getLore_id()+" | "
                 + p.plot.get(1).getPlot_id());
-        System.out.println(Ct.Cartoons.get(2).getName()+" | " + E1.elements.get(1).getCompany_id()+" | "+
+        System.out.println(Ct.Cartoons.get(2).getCart_id()+" | "+Ct.Cartoons.get(2).getName()+" | " + E1.elements.get(1).getCompany_id()+" | "+
                 Ct.Cartoons.get(2).getRaiting()+" | " +E2.elements.get(2).getLore_id()+" | "
                 + p.plot.get(2).getPlot_id());
 
         System.out.println("  ");
 
-        Ct.Red("Encanto","Alladin",	"4.5","5");
+        Ct.Red(Ct.Cartoons.get(0).getCart_id(), "Alladin","5");
 
         System.out.println(Ct.Cartoons.get(0).getName()+" | " + E1.elements.get(0).getCompany_id()+" | "+
                 Ct.Cartoons.get(0).getRaiting()+" | " +E2.elements.get(0).getLore_id()+" | "
                 +p.plot.get(0).getPlot_id());
 
+E1.Red(E1.elements.get(0).getCompany_id(),"Warner Br.","US");
+        System.out.println(" | "+E1.elements.get(0).getCompany_id()+" | " + E1.elements.get(0).getName()+" | "+
+                E1.elements.get(0).getLocation()+" | ");
+
+E2.Red(E2.elements.get(0),"");
 
 
 

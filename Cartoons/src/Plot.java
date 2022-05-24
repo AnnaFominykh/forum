@@ -24,12 +24,15 @@ public class Plot extends Cartoons{
         {Cartoons.remove(P);}
     }
 
-    public void Red(String base, String new_base, String begg, String new_beg,
-                    String max, String new_max, String end, String new_end)
-    {
-        String red =base.replace(base,new_base);
-        String red2 =begg.replace(begg,new_beg);
-String red3 = max.replace(max, new_max);
-String red4 = end.replace(end, new_end);
-    }
-}
+    public void Red(String p_id,String new_base, String new_beg,
+                   String new_max, String new_end)
+
+        {for (Plot_el pl: plot) {
+            if (pl.getPlot_id() == p_id) {
+                pl.setBase(new_base);
+                pl.setBeggining(new_beg);
+                pl.setThe_Climax(new_max);
+                pl.setEnding(new_end);
+
+    }}}}
+

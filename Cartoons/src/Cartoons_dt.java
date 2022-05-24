@@ -1,5 +1,6 @@
 public class Cartoons_dt {
     private String name;
+    private String cart_id;
     private String Company_id;
     private String Lore_id;
     private String Plot_id;
@@ -44,5 +45,13 @@ private String Raiting;
 
     public void setRaiting(String rait) {
        this.Raiting = rait;
+    }
+
+    public String getCart_id() {
+        return cart_id;
+    }
+
+    public void setCart_id(String cart_id) {
+        this.cart_id = cart_id;
     }
 }

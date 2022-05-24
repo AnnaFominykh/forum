@@ -20,6 +20,18 @@ public class Cartoons {
         return C_id;
     }
 
+    public String c_ID()
+    {
+
+        String cart_id="";
+        int c_ID;
+        c_ID=id;
+        id+=1;
+        cart_id+=c_ID;
+
+        return cart_id;
+    }
+
     public String L_id()
     {
         String l_id="";
@@ -47,6 +59,7 @@ public class Cartoons {
     public void add(String name,String rait) {
 
         Cartoons_dt C_dt = new Cartoons_dt();
+        C_dt.setCart_id(c_ID());
         C_dt.setName(name);
         C_dt.setRaiting(rait);
         boolean add = Cartoons.add(C_dt);
@@ -56,24 +69,24 @@ public class Cartoons {
         String C_id=C_ID();
         String l_id=L_id();
         String p_id=P_id();
+        String c_id=c_ID();
         int d;
         for (d=0;d<Cartoons.size(); d++);
-        if (Cartoons.get(d).getName().equals(name)&& Cartoons.get(d).getCompany_id().equals(C_id)&&
+        if (Cartoons.get(d).getCart_id().equals(c_id)&&Cartoons.get(d).getName().equals(name)&& Cartoons.get(d).getCompany_id().equals(C_id)&&
                 Cartoons.get(d).getRaiting().equals(rait)&& Cartoons.get(d).getLore_id().equals(l_id)&&
             Cartoons.get(d).getPlot_id().equals(p_id));
         {Cartoons.remove(d);}
     }
 
-    public void Red(String name,String new_name, String rait,String new_rait)
+    public void Red(String c_id, String new_name, String new_rait)
     {
+        for (Cartoons_dt cart:Cartoons) {
+            if (cart.getCart_id() == c_id) {
+                cart.setName(new_name);
+                cart.setRaiting(new_rait);
+            }
 
-        Cartoons_dt C_dt = new Cartoons_dt();
-        C_dt.setName(name.replace(name,new_name));
-        C_dt.setRaiting(rait.replace(rait, new_rait));
-        Cartoons.ф
-
-    }
-    }
+        }}}
 
 
 

@@ -3,6 +3,8 @@ import java.util.ArrayList;
 public class Company extends Cartoons{
     ArrayList<Elements> elements = new ArrayList<>();
 
+
+
     public void add(String name,String loc) {
 
             Elements el = new Elements();
@@ -22,14 +24,14 @@ boolean add = elements.add(el);
         {elements.remove(C);}
     }
 
-    public void Red(String name,String new_name, String loc, String new_loc)
-    {
-        String red =name.replace(name,new_name);
-        String red2 =loc.replace(loc,new_loc);
+    public void Red(String C_id, String new_name, String new_loc) {
+        for (Elements EL : elements) {
+            if (EL.getCompany_id() == C_id) {
+                EL.setName(new_name);
+               EL.setRaiting(new_loc);
+            }
 
-        System.out.println(red);
 
+        }
 
-    }
-
-}
+    }}

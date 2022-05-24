@@ -22,12 +22,12 @@ public class Lore extends Cartoons{
         {elements.remove(L);}
     }
 
-    public void Red(String mc_name,String new_mname,String ag_name,String new_aname, String loc, String new_loc)
-    {
-        String red =mc_name.replace(mc_name,new_mname);
-        String red2 = ag_name.replace(ag_name,new_aname);
-        String red3 =loc.replace(loc,new_loc);
-
+    public void Red(String l_id,String new_name,String new_aname, String new_loc)
+    {   for (Elements EL:elements) {
+                if (EL.getLore_id() == l_id) {
+                    EL.setName(new_name);
+                    EL.setName(new_aname);
+                    EL.setRaiting(new_loc);
     }
 
-}
+}}}
