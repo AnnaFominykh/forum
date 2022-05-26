@@ -20,7 +20,7 @@ public class Cartoons {
         return C_id;
     }
 
-    public String c_ID()
+    public String cart_ID()
     {
 
         String cart_id="";
@@ -59,24 +59,21 @@ public class Cartoons {
     public void add(String name,String rait) {
 
         Cartoons_dt C_dt = new Cartoons_dt();
-        C_dt.setCart_id(c_ID());
+        C_dt.setCart_id(cart_ID());
         C_dt.setName(name);
         C_dt.setRaiting(rait);
         boolean add = Cartoons.add(C_dt);
     }
 
-    public void Del (String name, String rait){
-        String C_id=C_ID();
-        String l_id=L_id();
-        String p_id=P_id();
-        String c_id=c_ID();
-        int d;
-        for (d=0;d<Cartoons.size(); d++);
-        if (Cartoons.get(d).getCart_id().equals(c_id)&&Cartoons.get(d).getName().equals(name)&& Cartoons.get(d).getCompany_id().equals(C_id)&&
-                Cartoons.get(d).getRaiting().equals(rait)&& Cartoons.get(d).getLore_id().equals(l_id)&&
-            Cartoons.get(d).getPlot_id().equals(p_id));
-        {Cartoons.remove(d);}
-    }
+    public void Del(String c_id, String name, String rait)
+    {
+        int a;
+        for (Cartoons_dt cart:Cartoons) {
+            if (cart.getCart_id() == c_id){
+                for (a=0;a<Cartoons.size(); a++);{
+        if (Cartoons.get(a).getName().equals(name)&& Cartoons.get(a).getCart_id().equals(c_id)&&
+              Cartoons.get(a).getRaiting().equals(rait));
+        {Cartoons.remove(a);}}} }}
 
     public void Red (String c_id, String new_name, String new_rait)
     {
@@ -86,7 +83,28 @@ public class Cartoons {
                 cart.setRaiting(new_rait);
             }
 
-        }}}
+        }}
+
+    public void out(String out)
+    {
+        if (out=="0"){
+            System.out.println(" | "+Cartoons.get(0).getCart_id()+" | " + Cartoons.get(0).getName()+" | "+
+                    Cartoons.get(0).getRaiting()+" | ");}
+        if (out=="1"){
+            System.out.println(" | "+Cartoons.get(1).getCart_id()+" | " + Cartoons.get(1).getName()+" | "+
+                    Cartoons.get(1).getRaiting()+" | ");}
+        if (out=="2"){
+            System.out.println(" | "+Cartoons.get(2).getCart_id()+" | " + Cartoons.get(2).getName()+" | "+
+                    Cartoons.get(2).getRaiting()+" | ");}
+        if (out=="all"){
+            System.out.println(" | "+Cartoons.get(0).getCart_id()+" | " + Cartoons.get(0).getName()+" | "+
+                    Cartoons.get(0).getRaiting()+" | ");
+            System.out.println(" | "+Cartoons.get(1).getCart_id()+" | " + Cartoons.get(1).getName()+" | "+
+                    Cartoons.get(1).getRaiting()+" | ");
+            System.out.println(" | "+Cartoons.get(2).getCart_id()+" | " + Cartoons.get(2).getName()+" | "+
+                    Cartoons.get(2).getRaiting()+" | ");
+        }}
+}
 
 
 

@@ -45,70 +45,52 @@ p.add("Return girl home","Girl appeared in Monster Inc.",
         }
 
         System.out.println("  ");
-        System.out.println(" | "+E1.elements.get(0).getCompany_id()+" | " + E1.elements.get(0).getName()+" | "+
-                E1.elements.get(0).getLocation()+" | ");
-        System.out.println(" | "+E1.elements.get(1).getCompany_id()+" | " + E1.elements.get(1).getName()+" | "+
-                E1.elements.get(1).getLocation()+" | ");
+        // out == id ("0","1"...) или "all"
+        E1.out("all");
         System.out.println("  ");
-        for (int L= 0; L < Ct.Cartoons.size(); L++){
-            Ct.Cartoons.get(L).getLore_id();
-        }
-
-        System.out.println(" | "+E2.elements.get(0).getLore_id()+" | " + E2.elements.get(0).getName()+" | "
-                + E2.elements.get(0).getAname()+" | " + E2.elements.get(0).getLocation()+" | ");
-        System.out.println(" | "+E2.elements.get(1).getLore_id()+" | " + E2.elements.get(1).getName()+" | "
-                + E2.elements.get(1).getAname()+" | "+ E2.elements.get(1).getLocation()+" | ");
-        System.out.println(" | "+E2.elements.get(2).getLore_id()+" | " + E2.elements.get(2).getName()+" | "
-                + E2.elements.get(2).getAname()+" | "+ E2.elements.get(2).getLocation()+" | ");
-
+        E2.out("all");
+        System.out.println("  ");
+        p.out("all");
+        System.out.println("  ");
+        Ct.out("all");
         System.out.println("  ");
 
-        System.out.println(" | "+p.plot.get(0).getPlot_id()+" | " + p.plot.get(0).getBase()+" | "
-                + p.plot.get(0).getBeggining()+" | " + p.plot.get(0).getThe_Climax()+" | "
-                + p.plot.get(0).getEnding()+" | ");
-        System.out.println(" | "+p.plot.get(1).getPlot_id()+" | " + p.plot.get(1).getBase()+" | "
-                + p.plot.get(1).getBeggining()+" | " + p.plot.get(1).getThe_Climax()+" | "
-                + p.plot.get(1).getEnding()+" | ");
-        System.out.println(" | "+p.plot.get(2).getPlot_id()+" | " + p.plot.get(2).getBase()+" | "
-                + p.plot.get(2).getBeggining()+" | " + p.plot.get(2).getThe_Climax()+" | "
-                + p.plot.get(2).getEnding()+" | ");
+        Ct.add("Alladin","5");
 
-        System.out.println("  ");
+        System.out.println(" | "+Ct.Cartoons.get(3).getCart_id()+" | "+Ct.Cartoons.get(3).getName()+" | " +
+                Ct.Cartoons.get(3).getRaiting()+" | ");
+        E1.add("Disney", "US");
+        System.out.println(" | "+E1.elements.get(2).getCompany_id()+" | " + E1.elements.get(2).getName()+" | "+
+                E1.elements.get(2).getLocation()+" | ");
+        E2.add("Alladin","Jafar","Agraba" );
+        System.out.println(" | "+E2.elements.get(3).getLore_id()+" | " + E2.elements.get(3).getCname()+" | "
+                +E2.elements.get(3).getAname()+" | " + E2.elements.get(3).getLocation()+" | ");
+        p.add("Make Jasmin fall in love, defeat Jafar",
+                "Finding lamp","Fight with Jafar","Free Genie");
+        System.out.println(" | "+p.plot.get(3).getPlot_id()+" | " + p.plot.get(3).getBase()+" | "
+                + p.plot.get(3).getBeggining()+" | " + p.plot.get(3).getThe_Climax()+" | "
+                + p.plot.get(3).getEnding()+" | ");
+        Ct.Red(Ct.Cartoons.get(3).getCart_id(),"The Cat Returns","4" );
+        E1.Red(E1.elements.get(2).getCompany_id(),"Studio Ghibli ","JP");
+        E2.Red(E2.elements.get(3).getPlot_id(),"Haru","Cat King","The Cat Kingdom");
+        p.Red(p.plot.get(3).getPlot_id(),"Bring Haru home","Haru save the cat prince","Tower collapse"
+                , "Haru back home");
 
+        System.out.println("");
 
+        System.out.println(" | "+Ct.Cartoons.get(3).getCart_id()+" | "+Ct.Cartoons.get(3).getName()+" | " +
+                Ct.Cartoons.get(3).getRaiting()+" | ");
+        System.out.println(" | "+E1.elements.get(2).getCompany_id()+" | " + E1.elements.get(2).getName()+" | "+
+                E1.elements.get(2).getLocation()+" | ");
+        System.out.println(" | "+E2.elements.get(3).getLore_id()+" | " + E2.elements.get(3).getCname()+" | "
+                +E2.elements.get(3).getAname()+" | " + E2.elements.get(3).getLocation()+" | ");
+        System.out.println(" | "+p.plot.get(3).getPlot_id()+" | " + p.plot.get(3).getBase()+" | "
+                + p.plot.get(3).getBeggining()+" | " + p.plot.get(3).getThe_Climax()+" | "
+                + p.plot.get(3).getEnding()+" | ");
 
-        System.out.println(Ct.Cartoons.get(0).getCart_id()+" | "+Ct.Cartoons.get(0).getName()+" | " + E1.elements.get(0).getCompany_id()+" | "+
-                Ct.Cartoons.get(0).getRaiting()+" | " +E2.elements.get(0).getLore_id()+" | "
-                +p.plot.get(0).getPlot_id());
-        System.out.println(Ct.Cartoons.get(1).getCart_id()+" | "+Ct.Cartoons.get(1).getName()+" | " + E1.elements.get(1).getCompany_id()+" | "+
-                Ct.Cartoons.get(1).getRaiting()+" | " +E2.elements.get(1).getLore_id()+" | "
-                + p.plot.get(1).getPlot_id());
-        System.out.println(Ct.Cartoons.get(2).getCart_id()+" | "+Ct.Cartoons.get(2).getName()+" | " + E1.elements.get(1).getCompany_id()+" | "+
-                Ct.Cartoons.get(2).getRaiting()+" | " +E2.elements.get(2).getLore_id()+" | "
-                + p.plot.get(2).getPlot_id());
-
-        System.out.println("  ");
-
-        Ct.Red(Ct.Cartoons.get(0).getCart_id(), "Alladin","5");
-
-        System.out.println(Ct.Cartoons.get(0).getName()+" | " + E1.elements.get(0).getCompany_id()+" | "+
-                Ct.Cartoons.get(0).getRaiting()+" | " +E2.elements.get(0).getLore_id()+" | "
-                +p.plot.get(0).getPlot_id());
-
-E1.Red(E1.elements.get(0).getCompany_id(),"Disney+","US");
-        System.out.println(" | "+E1.elements.get(0).getCompany_id()+" | " + E1.elements.get(0).getName()+" | "+
-                E1.elements.get(0).getLocation()+" | ");
-
-
-        System.out.println(" | "+p.plot.get(0).getPlot_id()+" | " + p.plot.get(0).getBase()+" | "
-                + p.plot.get(0).getBeggining()+" | " + p.plot.get(0).getThe_Climax()+" | "
-                + p.plot.get(0).getEnding()+" | ");
-
-E2.Red(E2.elements.get(0),"Alladin","Jafar","Agraba");
-        System.out.println(" | "+E2.elements.get(0).getLore_id()+" | " + E2.elements.get(0).getName()+" | "
-                + E2.elements.get(0).getAname()+" | " + E2.elements.get(0).getLocation()+" | ");
-
-
-
-
+        Ct.Del(Ct.Cartoons.get(3).getCart_id(),"The Cat Returns","4" );
+        E1.Del(E1.elements.get(2).getCompany_id(),"Studio Ghibli ","JP");
+        E2.Del(E2.elements.get(3).getPlot_id(),"Haru","Cat King","The Cat Kingdom");
+        p.Del(p.plot.get(3).getPlot_id(),"Bring Haru home","Haru save the cat prince","Tower collapse"
+                , "Haru back home");
 }}

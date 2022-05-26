@@ -14,8 +14,8 @@ public class Plot extends Cartoons{
         pl.setEnding(end);
         boolean add = plot.add(pl);
     }
-    public void Del (String base, String begg, String max, String end){
-        String p_id = P_id();
+    public void Del ( String p_id, String base, String begg, String max, String end){
+
         int P;
         for (P=0;P<plot.size(); P++);
         if (plot.get(P).getPlot_id().equals(p_id)&& plot.get(P).getBase().equals(base)&&
@@ -34,5 +34,35 @@ public class Plot extends Cartoons{
                 pl.setThe_Climax(new_max);
                 pl.setEnding(new_end);
 
-    }}}}
+    }}}
+
+    public void out(String out)
+    {
+
+        if (out=="0"){
+        {System.out.println(" | "+plot.get(0).getPlot_id()+" | " + plot.get(0).getBase()+" | "
+                + plot.get(0).getBeggining()+" | " + plot.get(0).getThe_Climax()+" | "
+                + plot.get(0).getEnding()+" | ");}
+        }
+        if (out=="1"){
+            {System.out.println(" | "+plot.get(1).getPlot_id()+" | " + plot.get(1).getBase()+" | "
+                    + plot.get(1).getBeggining()+" | " + plot.get(1).getThe_Climax()+" | "
+                    + plot.get(1).getEnding()+" | ");}}
+        if (out=="2"){
+                {System.out.println(" | "+plot.get(2).getPlot_id()+" | " + plot.get(2).getBase()+" | "
+                        + plot.get(2).getBeggining()+" | " + plot.get(2).getThe_Climax()+" | "
+                        + plot.get(2).getEnding()+" | ");}}
+        if (out=="all"){
+            System.out.println(" | "+plot.get(0).getPlot_id()+" | " + plot.get(0).getBase()+" | "
+                    + plot.get(0).getBeggining()+" | " + plot.get(0).getThe_Climax()+" | "
+                    + plot.get(0).getEnding()+" | ");
+            System.out.println(" | "+plot.get(1).getPlot_id()+" | " + plot.get(1).getBase()+" | "
+                    + plot.get(1).getBeggining()+" | " + plot.get(1).getThe_Climax()+" | "
+                    + plot.get(1).getEnding()+" | ");
+            System.out.println(" | "+plot.get(2).getPlot_id()+" | " + plot.get(2).getBase()+" | "
+                    + plot.get(2).getBeggining()+" | " + plot.get(2).getThe_Climax()+" | "
+                    + plot.get(2).getEnding()+" | ");
+        }
+        }
+}
 

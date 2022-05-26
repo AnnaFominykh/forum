@@ -15,8 +15,8 @@ public class Company extends Cartoons{
 boolean add = elements.add(el);
         }
 
-    public void Del (String name, String loc){
-        String C_id=C_ID();
+    public void Del (String C_id,String name, String loc){
+
         int C;
         for (C=0;C<elements.size(); C++);
         if (elements.get(C).getName().equals(name)&& elements.get(C).getCompany_id().equals(C_id)&&
@@ -25,13 +25,30 @@ boolean add = elements.add(el);
     }
 
     public void Red(String C_id, String new_name, String new_loc) {
-        for (Elements EL1: elements) {
+        for (Elements EL1 : elements) {
             if (EL1.getCompany_id() == C_id) {
                 EL1.setName(new_name);
-               EL1.setRaiting(new_loc);
+                EL1.setRaiting(new_loc);
             }
+        }
+    }
 
-
+    public void out(String out)
+    {
+        if (out=="0"){
+        System.out.println(" | "+elements.get(0).getCompany_id()+" | " + elements.get(0).getName()+" | "+
+                elements.get(0).getLocation()+" | ");}
+        if (out=="1"){
+        System.out.println(" | "+elements.get(1).getCompany_id()+" | " + elements.get(1).getName()+" | "+
+                elements.get(1).getLocation()+" | ");
+        System.out.println("  ");}
+        if (out=="all"){
+            System.out.println(" | "+elements.get(0).getCompany_id()+" | " + elements.get(0).getName()+" | "+
+                    elements.get(0).getLocation()+" | ");}
+        System.out.println(" | "+elements.get(1).getCompany_id()+" | " + elements.get(1).getName()+" | "+
+                elements.get(1).getLocation()+" | ");
         }
 
-    }}
+    }
+
+

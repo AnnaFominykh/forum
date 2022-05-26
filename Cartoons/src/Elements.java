@@ -9,7 +9,7 @@ public class Elements extends Cartoons_dt {
     }
 
     public void setCName(String Cname) {
-        this.name = name;
+        this.Cname = Cname;
     }
     public String getCname() {
         return Cname;
